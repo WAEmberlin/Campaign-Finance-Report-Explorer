@@ -110,34 +110,66 @@ export async function renderMap(filters, metric = 'raised') {
   setTimeout(() => map.invalidateSize(), 100);
 
   const snap = await computeStatewide({ ...filters, district: '', candidateId: null });
-  /** @type {Map<string, number>} */
-  const byDistrict = new Map();
+
+  /** @type {Map<string, Array<{ name: string, party: string, raised: number, spent: number, cash: number, pacPercent: number }>>} */
+  const candidatesByDistrict = new Map();
+
   for (const c of snap.candidates) {
     const num = c.districtId?.replace(/^dist_(house|senate)_/, '');
     if (!num) continue;
-    const raised = snap.contributions
+    const raisedFromRows = snap.contributions
       .filter((x) => x.candidateId === c.id)
       .reduce((s, x) => s + x.amount, 0);
-    const spent = snap.expenses
+    const raisedFromReports = snap.reports
+      .filter((r) => r.candidateId === c.id)
+      .reduce((s, r) => s + (r.totalReceipts || 0), 0);
+    const raised = raisedFromReports > 0 ? raisedFromReports : raisedFromRows;
+    const spentFromRows = snap.expenses
       .filter((x) => x.candidateId === c.id)
       .reduce((s, x) => s + x.amount, 0);
+    const spentFromReports = snap.reports
+      .filter((r) => r.candidateId === c.id)
+      .reduce((s, r) => s + (r.totalExpenditures || 0), 0);
+    const spent = spentFromReports > 0 ? spentFromReports : spentFromRows;
     const cash = snap.reports
       .filter((r) => r.candidateId === c.id)
       .reduce((s, r) => s + r.cashOnHand, 0);
     const pacAmt = snap.contributions
       .filter((x) => x.candidateId === c.id && x.donorType === 'pac')
       .reduce((s, x) => s + x.amount, 0);
+    const pacPercent = raised ? pacAmt / raised : 0;
+    const list = candidatesByDistrict.get(num) || [];
+    list.push({
+      name: c.name,
+      party: c.party || '',
+      raised,
+      spent,
+      cash,
+      pacPercent,
+    });
+    candidatesByDistrict.set(num, list);
+  }
+
+  for (const list of candidatesByDistrict.values()) {
+    list.sort((a, b) => b.raised - a.raised);
+  }
+
+  /** @type {Map<string, number>} */
+  const byDistrict = new Map();
+  for (const [num, list] of candidatesByDistrict) {
     const value =
       metric === 'spent'
-        ? spent
+        ? list.reduce((s, c) => s + c.spent, 0)
         : metric === 'cash'
-          ? cash
+          ? list.reduce((s, c) => s + c.cash, 0)
           : metric === 'pacPercent'
-            ? raised
-              ? pacAmt / raised
-              : 0
-            : raised;
-    byDistrict.set(num, (byDistrict.get(num) || 0) + value);
+            ? (() => {
+                const raised = list.reduce((s, c) => s + c.raised, 0);
+                const pac = list.reduce((s, c) => s + c.pacPercent * c.raised, 0);
+                return raised ? pac / raised : 0;
+              })()
+            : list.reduce((s, c) => s + c.raised, 0);
+    byDistrict.set(num, value);
   }
 
   const values = Array.from(byDistrict.values());
@@ -162,11 +194,13 @@ export async function renderMap(filters, metric = 'raised') {
     },
     onEachFeature: (feature, lyr) => {
       const d = districtNumber(feature.properties);
-      const v = byDistrict.get(d) || 0;
-      const label =
-        metric === 'pacPercent' ? `${(v * 100).toFixed(1)}% PAC` : formatCurrency(v);
       const name = feature.properties?.label || `House District ${d}`;
-      lyr.bindTooltip(`${name}: ${label}`);
+      lyr.bindTooltip(() => districtHoverHtml(name, candidatesByDistrict.get(d) || []), {
+        sticky: true,
+        opacity: 1,
+        className: 'map-district-tooltip',
+        direction: 'top',
+      });
       lyr.on('click', () => {
         setFilters({ office: 'kansas-house', district: d, candidateId: null });
       });
@@ -196,4 +230,35 @@ export async function renderMap(filters, metric = 'raised') {
   }
 
   log.info('Map rendered', { metric, districtsWithData: byDistrict.size, selected });
+}
+
+/**
+ * @param {string} districtLabel
+ * @param {Array<{ name: string, party: string, raised: number }>} candidates
+ */
+function districtHoverHtml(districtLabel, candidates) {
+  const total = candidates.reduce((s, c) => s + c.raised, 0);
+  if (!candidates.length) {
+    return `<div class="map-tip"><strong>${escapeHtml(districtLabel)}</strong><div class="map-tip-muted">No imported candidates</div></div>`;
+  }
+  const rows = candidates
+    .map((c) => {
+      const party = c.party ? ` <span class="map-tip-party">(${escapeHtml(c.party)})</span>` : '';
+      return `<li><span class="map-tip-name">${escapeHtml(c.name)}${party}</span><span class="map-tip-amt">${formatCurrency(c.raised)}</span></li>`;
+    })
+    .join('');
+  return `<div class="map-tip">
+    <strong>${escapeHtml(districtLabel)}</strong>
+    <div class="map-tip-total">District raised: ${formatCurrency(total)}</div>
+    <ul>${rows}</ul>
+  </div>`;
+}
+
+/** @param {string} s */
+function escapeHtml(s) {
+  return String(s || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
