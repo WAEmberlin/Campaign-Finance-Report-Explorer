@@ -471,6 +471,9 @@ export async function renderDonorExplorer(filters) {
 
   const columns = [
     { key: 'name', label: 'Donor' },
+    { key: 'city', label: 'City', format: (v) => v || '—' },
+    { key: 'state', label: 'State', format: (v) => v || '—' },
+    { key: 'occupation', label: 'Occupation', format: (v) => v || '—' },
     { key: 'total', label: 'Total', format: (v) => formatCurrency(v) },
     { key: 'count', label: 'Gifts', format: (v) => formatNumber(v) },
   ];

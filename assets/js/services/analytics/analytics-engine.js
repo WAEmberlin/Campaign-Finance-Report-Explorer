@@ -22,7 +22,7 @@ import { normalizeName } from '../../shared/format.js';
  * @property {number} individualPercent
  * @property {number} selfFundingPercent
  * @property {number} smallDonorPercent
- * @property {Array<{name: string, total: number, count: number}>} topDonors
+ * @property {Array<{name: string, total: number, count: number, city?: string, state?: string, occupation?: string}>} topDonors
  * @property {Array<{name: string, total: number, count: number, category: string}>} topVendors
  * @property {Array<{category: string, total: number}>} expenseCategories
  * @property {Array<{date: string, amount: number}>} fundraisingTimeline
@@ -96,7 +96,7 @@ export async function compute(filters) {
 
   const smallDonorTotal = sum(filteredContribs.filter((c) => c.amount < 100).map((c) => c.amount));
 
-  const topDonors = aggregateBy(filteredContribs, (c) => c.donorName, (c) => c.amount).slice(0, 25);
+  const topDonors = aggregateDonors(filteredContribs).slice(0, 25);
   const topVendors = summarizeVendors(filteredExpenses).slice(0, 25);
   const expenseCategories = aggregateBy(filteredExpenses, (e) => e.category || 'Other', (e) => e.amount);
 
@@ -185,6 +185,34 @@ function aggregateBy(rows, keyFn, amountFn) {
     const cur = map.get(name) || { name, total: 0, count: 0 };
     cur.total += amountFn(row) || 0;
     cur.count += 1;
+    map.set(name, cur);
+  }
+  return Array.from(map.values()).sort((a, b) => b.total - a.total);
+}
+
+/**
+ * Aggregate donors with city/state/occupation from contribution rows (first non-empty wins).
+ * @param {Array<{ donorName?: string, amount?: number, city?: string, state?: string, occupation?: string }>} contributions
+ * @returns {Array<{ name: string, total: number, count: number, city: string, state: string, occupation: string }>}
+ */
+function aggregateDonors(contributions) {
+  /** @type {Map<string, { name: string, total: number, count: number, city: string, state: string, occupation: string }>} */
+  const map = new Map();
+  for (const row of contributions) {
+    const name = row.donorName || 'Unknown';
+    const cur = map.get(name) || {
+      name,
+      total: 0,
+      count: 0,
+      city: '',
+      state: '',
+      occupation: '',
+    };
+    cur.total += row.amount || 0;
+    cur.count += 1;
+    if (!cur.city && row.city) cur.city = String(row.city).trim();
+    if (!cur.state && row.state) cur.state = String(row.state).trim();
+    if (!cur.occupation && row.occupation) cur.occupation = String(row.occupation).trim();
     map.set(name, cur);
   }
   return Array.from(map.values()).sort((a, b) => b.total - a.total);
