@@ -704,6 +704,72 @@ a:hover {
   border: 1px solid var(--border);
 }
 
+.leaflet-tooltip.map-district-tooltip {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  padding: 0.55rem 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  white-space: normal;
+  max-width: 280px;
+}
+
+.leaflet-tooltip.map-district-tooltip::before {
+  border-top-color: var(--bg-elevated);
+}
+
+.map-tip strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.map-tip-total {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.map-tip-muted {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.map-tip ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.map-tip li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.map-tip-name {
+  min-width: 0;
+}
+
+.map-tip-party {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.map-tip-amt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .toast-host {
   position: fixed;
   right: 1rem;
