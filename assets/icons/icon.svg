@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kansas Campaign Finance Explorer">
+  <rect width="512" height="512" rx="64" fill="#002868"/>
+  <rect x="64" y="320" width="64" height="112" rx="8" fill="#4da3ff"/>
+  <rect x="160" y="240" width="64" height="192" rx="8" fill="#3dd68c"/>
+  <rect x="256" y="160" width="64" height="272" rx="8" fill="#f0b429"/>
+  <rect x="352" y="96" width="64" height="336" rx="8" fill="#e8eef6"/>
+  <circle cx="400" cy="72" r="28" fill="#4da3ff"/>
+</svg>

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "pacs": [
+    { "name": "Kansas Republican Party", "aliases": ["ks gop", "kansas gop"] },
+    { "name": "Kansas Democratic Party", "aliases": ["ks dems", "kansas dems"] },
+    {
+      "name": "Kansans for a Democratic House PAC",
+      "aliases": ["democratic house", "kansans for a democratic house", "kfdh pac"]
+    },
+    { "name": "Kansas Chamber PAC", "aliases": ["chamber pac"] },
+    { "name": "NEA Kansas PAC", "aliases": ["nea-kansas", "kansas nea pac"] },
+    { "name": "Kansas Farm Bureau PAC", "aliases": ["farm bureau pac", "kfb pac"] },
+    { "name": "AT&T Kansas PAC", "aliases": ["at&t pac"] },
+    { "name": "Kansas Bankers Association PAC", "aliases": ["bankers pac", "kansas bankers association"] },
+    {
+      "name": "Kansas Automobile Dealers PAC",
+      "aliases": ["kansas automobile dealers", "auto dealers pac", "kansas auto dealers"]
+    },
+    { "name": "Kansas Realtors PAC", "aliases": ["realtors pac", "kar pac", "kansas realtors"] }
+  ],
+  "patterns": [
+    { "regex": "\\bpac\\b", "confidence": 0.85 },
+    { "regex": "\\bcommittee\\b", "confidence": 0.7 },
+    { "regex": "\\bpolitical action\\b", "confidence": 0.9 },
+    { "regex": "\\bfor (kansas|house|senate)\\b", "confidence": 0.65 }
+  ]
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>KCFE Unit Tests</title>
+    <style>
+      body { font-family: system-ui, sans-serif; background: #0f141c; color: #f4f7fb; padding: 2rem; }
+      .pass { color: #3dd68c; }
+      .fail { color: #e85d5d; }
+      pre { background: #1a2230; padding: 1rem; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h1>Kansas Campaign Finance Explorer — Unit Tests</h1>
+    <pre id="out">Running…</pre>
+    <script type="module">
+      import { runParserTests } from './unit/parser.test.js';
+      import { runPacTests } from './unit/pac.test.js';
+      import { runAnalyticsTests } from './unit/analytics.test.js';
+
+      const suites = [
+        ['parser', runParserTests()],
+        ['pac', runPacTests()],
+        ['analytics', runAnalyticsTests()],
+      ];
+
+      let passed = 0;
+      let failed = 0;
+      const lines = [];
+      for (const [name, result] of suites) {
+        passed += result.passed;
+        failed += result.failed;
+        lines.push(`[${name}] ${result.passed} passed, ${result.failed} failed`);
+        for (const e of result.errors) lines.push(`  FAIL ${e}`);
+      }
+      lines.push('');
+      lines.push(failed ? `FAILED: ${failed}` : `ALL PASSED (${passed})`);
+      document.getElementById('out').textContent = lines.join('\n');
+      document.getElementById('out').className = failed ? 'fail' : 'pass';
+      console.log(lines.join('\n'));
+    </script>
+  </body>
+</html>

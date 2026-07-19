@@ -1,0 +1,70 @@
+{
+  "candidate": {
+    "name": "Greg H. Wilson",
+    "office": "Kansas House",
+    "district": "70",
+    "party": "Republican",
+    "cycle": "2026"
+  },
+  "summary": {
+    "beginningBalance": 0.0,
+    "cashOnHand": 878.75,
+    "totalReceipts": 900.0,
+    "totalExpenditures": 21.25,
+    "totalLoans": 400.0,
+    "periodStart": "2025-01-01",
+    "periodEnd": "2025-12-31",
+    "filedDate": "2026-01-10"
+  },
+  "contributions": [
+    {
+      "donorName": "Kansas Bankers Association PAC",
+      "amount": 250.0,
+      "date": "2025-12-11",
+      "city": "Topeka",
+      "state": "KS",
+      "zip": "66604",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Greg H. Wilson",
+      "amount": 400.0,
+      "date": "2025-12-11",
+      "city": "Abilene",
+      "state": "KS",
+      "zip": "67410",
+      "occupation": "Farmer / House of Representatives",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kansas Automobile Dealers PAC",
+      "amount": 250.0,
+      "date": "2025-12-01",
+      "city": "Topeka",
+      "state": "KS",
+      "zip": "66603",
+      "schedule": "A",
+      "donorType": "pac"
+    }
+  ],
+  "expenses": [
+    {
+      "vendorName": "Pinnacle Bank",
+      "amount": 21.25,
+      "date": "2025-12-23",
+      "purpose": "Supplies \u2014 Deluxe checks to write checks",
+      "category": "Office",
+      "city": "Gretna",
+      "state": "NE",
+      "schedule": "C"
+    }
+  ],
+  "loans": [],
+  "warnings": [],
+  "source": {
+    "kpdcCode": "H070GW",
+    "reportUrl": "https://kansas.gov/ethics/CFAScanned/House/2026ElecCycle/202601/H070GW_202601.pdf",
+    "indexUrl": "http://www.kansas.gov/ethics/CFAScanned/House/2026ElecCycle/HLinks2026EC.htm",
+    "notes": "Contribution/expense rows verified against H070GW_202601.pdf text extraction."
+  }
+}

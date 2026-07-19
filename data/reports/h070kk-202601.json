@@ -1,0 +1,537 @@
+{
+  "candidate": {
+    "name": "Kylie Christine Kilmer",
+    "office": "Kansas House",
+    "district": "70",
+    "party": "Democrat",
+    "cycle": "2026"
+  },
+  "summary": {
+    "beginningBalance": 0.0,
+    "cashOnHand": 3065.19,
+    "totalReceipts": 4260.0,
+    "totalExpenditures": 1194.81,
+    "totalLoans": 0.0,
+    "periodStart": "2025-01-01",
+    "periodEnd": "2025-12-31",
+    "filedDate": "2026-01-07"
+  },
+  "contributions": [
+    {
+      "donorName": "Judith Whitley",
+      "amount": 10.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Paula Higley",
+      "amount": 25.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Cheryl Thummel",
+      "amount": 50.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kim Shafer",
+      "amount": 25.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Lisa Boyer",
+      "amount": 100.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Diana L Combs",
+      "amount": 20.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jerry Brick",
+      "amount": 100.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Andra Cunningham",
+      "amount": 50.0,
+      "date": "2025-12-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "My Phone",
+      "amount": 50.0,
+      "date": "2025-12-29",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Pamela Smith",
+      "amount": 25.0,
+      "date": "2025-12-28",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jenna Blosser",
+      "amount": 5.0,
+      "date": "2025-12-28",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Donna Segebart",
+      "amount": 5.0,
+      "date": "2025-12-28",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Nicole Feyerherm",
+      "amount": 15.0,
+      "date": "2025-12-28",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kathleen Souza",
+      "amount": 5.0,
+      "date": "2025-12-23",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Greg Linden",
+      "amount": 20.0,
+      "date": "2025-12-23",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Lauren Martin",
+      "amount": 5.0,
+      "date": "2025-12-19",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kyla Holland",
+      "amount": 20.0,
+      "date": "2025-12-18",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Paula Higley",
+      "amount": 10.0,
+      "date": "2025-12-18",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kristin Hashbarger",
+      "amount": 25.0,
+      "date": "2025-12-17",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Paula Higley",
+      "amount": 10.0,
+      "date": "2025-12-17",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Anita Hockman",
+      "amount": 5.0,
+      "date": "2025-12-10",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Christine Babcock",
+      "amount": 20.0,
+      "date": "2025-12-10",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Todd Clapsaddle",
+      "amount": 100.0,
+      "date": "2025-12-10",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Marian Riedy",
+      "amount": 100.0,
+      "date": "2025-12-09",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jennie Lipson",
+      "amount": 10.0,
+      "date": "2025-12-09",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Aidan Thibodeau",
+      "amount": 5.0,
+      "date": "2025-12-08",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Sean Fulton",
+      "amount": 250.0,
+      "date": "2025-12-07",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Martin Fadden",
+      "amount": 50.0,
+      "date": "2025-12-03",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Contributor 29",
+      "amount": 5.0,
+      "date": "2025-11-23",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Chris",
+      "amount": 25.0,
+      "date": "2025-11-21",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Annette Hernandez",
+      "amount": 50.0,
+      "date": "2025-11-18",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Debra Moody",
+      "amount": 25.0,
+      "date": "2025-11-13",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Anita Hockman",
+      "amount": 5.0,
+      "date": "2025-11-10",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Wayne Holub",
+      "amount": 25.0,
+      "date": "2025-11-10",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jennie Lipson",
+      "amount": 10.0,
+      "date": "2025-11-09",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Timothy Wiens",
+      "amount": 100.0,
+      "date": "2025-11-09",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Gary Lyndaker",
+      "amount": 50.0,
+      "date": "2025-11-08",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Leann Toews",
+      "amount": 15.0,
+      "date": "2025-11-08",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Judeen Bachura",
+      "amount": 40.0,
+      "date": "2025-11-07",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Amanda Lindahl",
+      "amount": 50.0,
+      "date": "2025-11-03",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Martin Fadden",
+      "amount": 50.0,
+      "date": "2025-11-03",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Paula Higley",
+      "amount": 50.0,
+      "date": "2025-10-31",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "William Heatherman",
+      "amount": 50.0,
+      "date": "2025-10-29",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Emily Schlesener",
+      "amount": 25.0,
+      "date": "2025-10-27",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kathleen Souza",
+      "amount": 5.0,
+      "date": "2025-10-23",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kansans for a Democratic House PAC",
+      "amount": 120.0,
+      "date": "2025-10-22",
+      "state": "KS",
+      "schedule": "A",
+      "donorType": "pac"
+    },
+    {
+      "donorName": "Martin Fadden",
+      "amount": 50.0,
+      "date": "2025-10-19",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Rebecca Perkins",
+      "amount": 100.0,
+      "date": "2025-10-16",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jerre Wassenberg",
+      "amount": 50.0,
+      "date": "2025-10-13",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jennifer Kassebaum",
+      "amount": 50.0,
+      "date": "2025-10-13",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kim Krewson",
+      "amount": 50.0,
+      "date": "2025-10-11",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jill Orwig",
+      "amount": 25.0,
+      "date": "2025-10-11",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Anita Hockman",
+      "amount": 5.0,
+      "date": "2025-10-10",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Steven Menefee",
+      "amount": 5.0,
+      "date": "2025-10-09",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jennie Lipson",
+      "amount": 10.0,
+      "date": "2025-10-09",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jenna Blosser",
+      "amount": 5.0,
+      "date": "2025-10-09",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Bob Brennan",
+      "amount": 100.0,
+      "date": "2025-10-08",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Mary Alice Ruiz",
+      "amount": 20.0,
+      "date": "2025-10-06",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Chris",
+      "amount": 25.0,
+      "date": "2025-10-01",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Terrie Reiff",
+      "amount": 50.0,
+      "date": "2025-09-30",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Donna Reynolds",
+      "amount": 25.0,
+      "date": "2025-09-30",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kylie Kilmer",
+      "amount": 1500.0,
+      "date": "2025-09-29",
+      "state": "KS",
+      "schedule": "A",
+      "selfFunding": true,
+      "occupation": "Candidate"
+    },
+    {
+      "donorName": "Anna Schlesener",
+      "amount": 25.0,
+      "date": "2025-09-29",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kathleen Souza",
+      "amount": 5.0,
+      "date": "2025-09-23",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jodi Bachand",
+      "amount": 10.0,
+      "date": "2025-09-21",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jan Wade",
+      "amount": 20.0,
+      "date": "2025-09-19",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Sharon LaRosa",
+      "amount": 20.0,
+      "date": "2025-09-18",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Jessica Hoglund",
+      "amount": 25.0,
+      "date": "2025-09-17",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Emily Schlesener",
+      "amount": 25.0,
+      "date": "2025-09-16",
+      "state": "KS",
+      "schedule": "A"
+    },
+    {
+      "donorName": "Kylie Kilmer",
+      "amount": 125.0,
+      "date": "2025-09-12",
+      "state": "KS",
+      "schedule": "A",
+      "selfFunding": true,
+      "occupation": "Candidate"
+    },
+    {
+      "donorName": "Kylie Kilmer",
+      "amount": 120.0,
+      "date": "2025-09-03",
+      "state": "KS",
+      "schedule": "A",
+      "selfFunding": true,
+      "occupation": "Candidate"
+    }
+  ],
+  "expenses": [],
+  "loans": [],
+  "warnings": [
+    "Schedule A: 71 itemized contributions = $4,260.00.",
+    "Schedule C itemization omitted (PDF column extraction duplicated rows); Spent uses summary total $1,194.81."
+  ],
+  "source": {
+    "kpdcCode": "H070KK",
+    "reportUrl": "https://kansas.gov/ethics/CFAScanned/House/2026ElecCycle/202601/H070KK_202601.pdf",
+    "indexUrl": "http://www.kansas.gov/ethics/CFAScanned/House/2026ElecCycle/HLinks2026EC.htm",
+    "treasurer": "Wesley Austin Emberlin"
+  }
+}

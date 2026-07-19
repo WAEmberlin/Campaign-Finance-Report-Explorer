@@ -1,0 +1,24 @@
+{
+  "name": "Kansas Campaign Finance Explorer",
+  "short_name": "KS Finance",
+  "description": "Browser-only analytics platform for Kansas campaign finance reports.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f141c",
+  "theme_color": "#002868",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

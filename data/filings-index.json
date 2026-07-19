@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-07-19T02:11:46.000Z",
+  "source": "http://www.kansas.gov/ethics/CFAScanned/House/2026ElecCycle/HLinks2026EC.htm",
+  "cycles": [
+    {
+      "cycle": "2026",
+      "offices": [
+        {
+          "office": "kansas-house",
+          "label": "Kansas House",
+          "indexUrl": "http://www.kansas.gov/ethics/CFAScanned/House/2026ElecCycle/HLinks2026EC.htm",
+          "reports": [
+            {
+              "id": "h070-kilmer-202601",
+              "candidateName": "Kylie Christine Kilmer",
+              "district": "70",
+              "office": "kansas-house",
+              "cycle": "2026",
+              "party": "Democrat",
+              "periodLabel": "202601",
+              "periodStart": "2025-01-01",
+              "periodEnd": "2025-12-31",
+              "reportType": "Receipts & Expenditures",
+              "sourceUrl": "https://kansas.gov/ethics/CFAScanned/House/2026ElecCycle/202601/H070KK_202601.pdf",
+              "localPath": "data/reports/h070kk-202601.json",
+              "mirrored": true,
+              "kpdcCode": "H070KK"
+            },
+            {
+              "id": "h070-rein-202601",
+              "candidateName": "Brandon L. Rein",
+              "district": "70",
+              "office": "kansas-house",
+              "cycle": "2026",
+              "party": "Republican",
+              "periodLabel": "202601",
+              "periodStart": "2025-01-01",
+              "periodEnd": "2025-12-31",
+              "reportType": "Appointment of Treasurer (no R&E filed yet)",
+              "sourceUrl": "https://kansas.gov/ethics/CFAScanned/House/2026ElecCycle/Treasurers/H070BR_AT.pdf",
+              "localPath": "data/reports/h070br-202601.json",
+              "mirrored": true,
+              "kpdcCode": "H070BR"
+            },
+            {
+              "id": "h070-wilson-202601",
+              "candidateName": "Greg H. Wilson",
+              "district": "70",
+              "office": "kansas-house",
+              "cycle": "2026",
+              "party": "Republican",
+              "periodLabel": "202601",
+              "periodStart": "2025-01-01",
+              "periodEnd": "2025-12-31",
+              "reportType": "Receipts & Expenditures",
+              "sourceUrl": "https://kansas.gov/ethics/CFAScanned/House/2026ElecCycle/202601/H070GW_202601.pdf",
+              "localPath": "data/reports/h070gw-202601.json",
+              "mirrored": true,
+              "kpdcCode": "H070GW"
+            }
+          ]
+        },
+        {
+          "office": "kansas-senate",
+          "label": "Kansas Senate",
+          "indexUrl": "http://www.kansas.gov/ethics/CFAScanned/Senate/2026ElecCycle/",
+          "reports": []
+        },
+        {
+          "office": "governor",
+          "label": "Governor",
+          "indexUrl": "http://www.kansas.gov/ethics/CFAScanned/StWide/2026ElecCycle/SWLinks2026EC.htm",
+          "reports": []
+        }
+      ]
+    }
+  ],
+  "notes": "Kansas House District 70 catalog mirrored from KPDC CFAScanned. Candidates: Kylie Christine Kilmer (D), Brandon L. Rein (R), Greg H. Wilson (R). Rebuild with: python scripts/build_d70_reports.py"
+}

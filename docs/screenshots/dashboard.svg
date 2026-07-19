@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#0f141c"/>
+  <rect width="960" height="56" fill="#002868"/>
+  <text x="24" y="36" fill="#f4f7fb" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700">Kansas Campaign Finance Explorer</text>
+  <text x="24" y="110" fill="#f4f7fb" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700">District Dashboard</text>
+  <text x="24" y="140" fill="#9aa8bc" font-family="Segoe UI, sans-serif" font-size="14">Screenshot placeholder  run locally and capture the live UI</text>
+  <rect x="24" y="170" width="200" height="90" rx="6" fill="#1a2230" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="244" y="170" width="200" height="90" rx="6" fill="#1a2230" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="464" y="170" width="200" height="90" rx="6" fill="#1a2230" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="684" y="170" width="200" height="90" rx="6" fill="#1a2230" stroke="rgba(255,255,255,0.08)"/>
+  <text x="40" y="210" fill="#9aa8bc" font-size="12">RAISED</text>
+  <text x="40" y="240" fill="#4da3ff" font-size="22" font-weight="700">$48,200</text>
+</svg>

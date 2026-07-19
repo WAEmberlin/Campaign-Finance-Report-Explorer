@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+node_modules/
+.cache/
+dist/
+*.local
+data/reports/_pdf_cache/
+data/geo/_sldl_kml.zip
+data/geo/_sldl_raw/
+scripts/d70_scrape.json

@@ -1,0 +1,31 @@
+{
+  "candidate": {
+    "name": "Brandon L. Rein",
+    "office": "Kansas House",
+    "district": "70",
+    "party": "Republican",
+    "cycle": "2026"
+  },
+  "summary": {
+    "beginningBalance": 0,
+    "cashOnHand": 0,
+    "totalReceipts": 0,
+    "totalExpenditures": 0,
+    "totalLoans": 0,
+    "periodStart": "2025-01-01",
+    "periodEnd": "2025-12-31",
+    "filedDate": null
+  },
+  "contributions": [],
+  "expenses": [],
+  "loans": [],
+  "warnings": [
+    "As of catalog build, KPDC lists only Appointment of Treasurer (H070BR_AT.pdf) for Brandon L. Rein \u2014 no 202601 Receipts & Expenditures PDF yet."
+  ],
+  "source": {
+    "kpdcCode": "H070BR",
+    "appointmentOfTreasurerUrl": "https://kansas.gov/ethics/CFAScanned/House/2026ElecCycle/Treasurers/H070BR_AT.pdf",
+    "reportUrl": null,
+    "indexUrl": "http://www.kansas.gov/ethics/CFAScanned/House/2026ElecCycle/HLinks2026EC.htm"
+  }
+}

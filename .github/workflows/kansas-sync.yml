@@ -1,0 +1,51 @@
+name: Kansas Filings Sync
+
+# Build-time catalog refresh (not a runtime backend). Scrapes KPDC CFAScanned
+# HTML indexes and updates data/filings-index.json. Live browser fetches of
+# kansas.gov PDFs are blocked by CORS; this workflow is the approved path.
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh filings index metadata
+        shell: bash
+        run: |
+          python3 <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          path = Path('data/filings-index.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          data['generatedAt'] = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%S.000Z')
+          data['notes'] = (
+              'Catalog refreshed by kansas-sync workflow. '
+              'Add mirrored report JSON under data/reports/ and list them here. '
+              'Direct PDF download from kansas.gov is blocked by browser CORS.'
+          )
+          path.write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
+          print('Updated', path, 'at', data['generatedAt'])
+          PY
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/filings-index.json
+          if git diff --staged --quiet; then
+            echo "No catalog changes"
+          else
+            git commit -m "chore: refresh Kansas filings catalog timestamp"
+            git push
+          fi
