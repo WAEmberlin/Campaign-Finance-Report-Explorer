@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T02:11:46.000Z",
+  "generatedAt": "2026-07-20T13:58:16.000Z",
   "source": "http://www.kansas.gov/ethics/CFAScanned/House/2026ElecCycle/HLinks2026EC.htm",
   "cycles": [
     {
@@ -75,5 +75,5 @@
       ]
     }
   ],
-  "notes": "Kansas House District 70 catalog mirrored from KPDC CFAScanned. Candidates: Kylie Christine Kilmer (D), Brandon L. Rein (R), Greg H. Wilson (R). Rebuild with: python scripts/build_d70_reports.py"
+  "notes": "Catalog refreshed by kansas-sync workflow. Add mirrored report JSON under data/reports/ and list them here. Direct PDF download from kansas.gov is blocked by browser CORS."
 }
